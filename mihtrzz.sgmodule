@@ -6,7 +6,7 @@
 # Bản quyền thuộc về Mihtrzz
 
 [MITM]
-hostname=api.revenuecat.com,us-central1-alight-creative.cloudfunctions.net,photos.adobe.io,api.picsart.com,spclient.wg.spotify.com,premium*.truecaller.com,sub.store,api-sub.meitu.com
+hostname=api.revenuecat.com,us-central1-alight-creative.cloudfunctions.net,photos.adobe.io,api.picsart.com,api-mobile.soundcloud.com,spclient.wg.spotify.com,premium*.truecaller.com,sub.store,api-sub.meitu.com
 
 [Script]
 
@@ -25,6 +25,9 @@ PhotoRoom=type=http-response,pattern=https?:\/\/api\.revenuecat\.com\/v1\/(subsc
 
 # Picsart
 Picsart=type=http-request,pattern=https://api.picsart.com/gw-v2/shop/subscription/apple/purchases,script-path=https://raw.githubusercontent.com/iammihtrzz/rin/refs/heads/json/picsart.js
+
+# SoundCloud
+SoundCloud=type=http-response,pattern=https://api-mobile.soundcloud.com/configuration/ios,requires-body=1,script-path=https://raw.githubusercontent.com/iammihtrzz/rin/refs/heads/json/soundcloud.js
 
 # Spotify
 Spotifylyric=type=http-response,pattern=https:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/iammihtrzz/rin/refs/heads/json/spotifylyrics.js
